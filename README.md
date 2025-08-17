@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+````markdown
+# AI Meeting Notes Summarizer & Sharer
+
+An AI-powered web application to **summarize meeting transcripts** and **share structured summaries via email**.  
+Built with **Next.js 14 (App Router)**, **TypeScript**, **TailwindCSS**, and the **OpenAI API**.
+
+---
+
+## 🚀 Features
+
+- Upload or paste meeting transcripts.
+- Add a **custom instruction/prompt** (e.g., “Summarize in bullet points for executives”).
+- Generate **AI-powered structured summaries**.
+- Edit the generated summary before finalizing.
+- Share the summary via **email** by entering recipient addresses.
+- Clean and simple UI built with TailwindCSS.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 14 (App Router) + TypeScript
+- **Styling**: TailwindCSS
+- **Backend**: Next.js API routes
+- **AI**: OpenAI GPT model
+- **Email**: Nodemailer (using SMTP / Gmail / any provider)
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/meeting-summarizer.git
+cd meeting-summarizer
+````
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env.local` file in the root of the project:
+
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+EMAIL_HOST=smtp.yourprovider.com
+EMAIL_PORT=587
+EMAIL_USER=your_email@example.com
+EMAIL_PASS=your_email_password_or_app_password
+```
+
+> ⚠️ If you use Gmail, you’ll need to create an **App Password** instead of your normal password.
+
+---
+
+## ▶️ Running the App
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧪 Testing the App
 
-## Learn More
+1. Go to the homepage.
+2. Paste a transcript (e.g., meeting notes).
+3. Enter a prompt (example: *“Summarize in bullet points for executives”*).
+4. Click **Generate Summary** → AI will create a structured summary.
+5. Edit the summary if needed.
+6. Enter one or more email addresses and click **Share via Email**.
+7. Check the recipient’s inbox to confirm delivery.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 Example Transcript to Test
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Paste this in the transcript box:
 
-## Deploy on Vercel
+```
+Today’s meeting covered three main points. First, the product team will finish the UI redesign by next Friday. Second, the sales team reported a 12% increase in leads this quarter. Finally, action items include scheduling a client demo and preparing the Q3 budget report.
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Prompt:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+Summarize in bullet points highlighting only key action items.
+```
+
+---
+
+## ✅ Expected Output Example
+
+* Product team to finish UI redesign by next Friday.
+* Schedule a client demo.
+* Prepare the Q3 budget report.
+
+---
+
+## 📤 Deployment
+
+To deploy on **Vercel**:
+
+```bash
+npm run build
+```
+
+Push to GitHub, then connect your repo to [Vercel](https://vercel.com).
+Make sure to set your `.env` values in Vercel’s **Environment Variables** settings.
+
+---
+
+## 📌 Future Improvements
+
+* Support for **file uploads** (PDF, DOCX, TXT).
+* Save summaries in a **user dashboard**.
+* Support for multiple languages.
+* Integration with Slack/Teams for direct sharing.
+
+---
+
+## 👩‍💻 Author
+
+Built by **\[Khushi Pandey]**
+📧 Contact:pandeykhushhi@gmail.com
+
+```
+
